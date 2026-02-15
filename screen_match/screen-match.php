@@ -101,8 +101,13 @@ var_dump($posicaoDoisPontos);
 
 var_dump(substr($filme["nome"], 0, $posicaoDoisPontos));//Retorna parte de uma string
 
+//echo json_encode($filme); //Serve para transformar array associativo no formato JSON
 
+//var_dump(json_decode('{"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"Super-her\u00f3i"}',true));// Serve para transformar informação json em formato de objeto ou array, depende do segundo parâmetro: True usa array, se não vem como objeto 
 
+$filmeComoStringJson = json_encode($filme);
+
+file_put_contents(__DIR__."/filme.json",$filmeComoStringJson); //exporta o json como arquivo
 
 
 
