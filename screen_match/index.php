@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__."/funcoes.php";
+require __DIR__."/src/funcoes.php";
 
 $nomeFilme = "Top Gun - Maverick";
 $nomeFilme = "Thor: Ragnarok";
@@ -78,14 +78,22 @@ echo "$argc\n"; // Contém o número de parâmetros passados
     "Super-herói"
 ]; //Array Simples*/
 
-$filme = [
+$filme = criaFilme(
+    nome:"Thor: Ragnarok", 
+    anoLancamento:2021, 
+    nota:7.8, 
+    genero:"Super-herói"
+    );// definindo por função e nomeando parâmetros
+
+    
+/*$filme = [
     "nome"   => "Thor: Ragnarok",
     "ano"    => 2021,
     "nota"   => 7.8,
     "genero" => "Super-herói"
-]; //Array dando nome aos indices(dicionario/mapa) - Array Associativo
+]; //Array dando nome aos indices(dicionario/mapa) - Array Associativo*/
 
-echo "Nome do filme: ".$filme["nome"];
+echo "Nome do filme: ".$filme["nome"]."\n";
 
 var_dump($notas);
 sort($notas);//Ordena os valores do array

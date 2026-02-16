@@ -12,3 +12,12 @@ function exibeMensagemLancamento(int $ano): void {//recomendado colocar o tipo n
 function incluidoNoPlano(bool $planoPrime,int $anoLancamento): bool { // alem do tipo no parametro esta informando o tipo de retorno apos os dois pontos
     return $planoPrime || $anoLancamento < 2020;   
 }
+
+function criaFilme(string $nome, int $anoLancamento, float $nota, string $genero): array{
+    return [
+        'nome'   => $nome,
+        'ano'    => $anoLancamento,
+        'nota'   => $nota,
+        'genero' => $genero
+    ];
+}
