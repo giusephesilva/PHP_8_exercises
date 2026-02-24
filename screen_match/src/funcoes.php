@@ -13,11 +13,12 @@ function incluidoNoPlano(bool $planoPrime,int $anoLancamento): bool { // alem do
     return $planoPrime || $anoLancamento < 2020;   
 }
 
-function criaFilme(string $nome, int $anoLancamento, float $nota, string $genero): array{
-    return [
-        'nome'   => $nome,
-        'ano'    => $anoLancamento,
-        'nota'   => $nota,
-        'genero' => $genero
-    ];
+function criaFilme(string $nome, int $anoLancamento, float $nota, string $genero): Filme{
+    $filme = new Filme();//Instanciando a classe e criando um objeto
+
+    $filme->nome = $nome;
+    $filme->anoLancamento = $anoLancamento;
+    $filme->genero = $genero;
+    $filme->nota = $nota;
+    return $filme;
 }
