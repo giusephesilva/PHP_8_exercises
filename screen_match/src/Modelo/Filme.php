@@ -7,7 +7,10 @@ class Filme{
     private array $notas;
 
 
-    public function __construct(private string $nome,private int $anoLancamento,private string $genero){//Método construtor //alem disso passando o modificador de acesso direto no construtor, gito mesmo ja transforma em atributo sem precisar definir acima
+    public function __construct(
+        public readonly string $nome, //Adicionado a propriedade Readonly para informar que a propriedade não será modificada e sim só lida, com isso podemos utilizar a propriedade como publica, e também remover os GETTERS das mesmas
+        public readonly int $anoLancamento,
+        public readonly Genero $genero){//Método construtor //alem disso passando o modificador de acesso direto no construtor, gito mesmo ja transforma em atributo sem precisar definir acima
         /*$this->nome = $nome;
         $this->anoLancamento = $anoLancamento;
         $this->genero = $genero;*/ //como ja inicializou dentro dos parênteses não precisa chamar aqui.
@@ -24,13 +27,13 @@ class Filme{
         return $somaNotas / $quantidadeNotas;
     }
 
-    public function anoLancamento():int{ //GET anoLancamento
+    /*public function anoLancamento():int{ //GET anoLancamento
         return $this->anoLancamento;
     }
 
-    /*public function defineAnoLancamento(int $anoLancamento):void{ //SET anoLancamento
+    public function defineAnoLancamento(int $anoLancamento):void{ //SET anoLancamento
         $this->anoLancamento = $anoLancamento;
-    }*/
+    }
     
     public function nome():string{
         return $this->nome;
@@ -38,5 +41,5 @@ class Filme{
 
     public function genero():string{
         return $this->genero;
-    }
+    }*/
 }

@@ -1,11 +1,12 @@
 <?php
 
 require __DIR__."/src/Modelo/Filme.php";
+require __DIR__."/src/Modelo/Genero.php";
 
 
 echo "Bem vindo(a) ao SCREEN MATCH\n";
 
-$filme = new Filme(nome:'Thor - Ragnarok',anoLancamento:2021,genero:'Super-Herói');
+$filme = new Filme('Thor - Ragnarok',2021,Genero::SuperHeroi);// Usa :: para referenciar um enum
 
 
 $filme->avalia(10);
@@ -17,7 +18,7 @@ $filme->avalia(8.2);
 var_dump($filme);
 
 echo $filme->media()."\n";
-echo $filme->anoLancamento();
+echo $filme->anoLancamento;
 
 
 
