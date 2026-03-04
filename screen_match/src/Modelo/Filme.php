@@ -8,4 +8,8 @@ class Filme extends Titulo{
         public readonly int $duracaoEmMinutos){
             parent::__construct($nome,$anoLancamento,$genero);// Chama o construtor da classe base
     }
+
+    public function duracaoEmMinutos(): int {
+        return $this->duracaoEmMinutos;
+    }
 }

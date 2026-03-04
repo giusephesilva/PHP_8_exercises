@@ -20,4 +20,8 @@ class Titulo{
         $quantidadeNotas = count($this->notas);
         return $somaNotas / $quantidadeNotas;
     }
+
+    public function duracaoEmMinutos():int{
+        return 0;
+    }
 }
