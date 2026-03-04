@@ -1,6 +1,6 @@
 <?php
 
-class Titulo{
+abstract class Titulo{ //informa que a classe não pode ser instanciada diretamente, ela é uma classe 'base' para ser herdada  
     private array $notas;
 
 
@@ -21,7 +21,5 @@ class Titulo{
         return $somaNotas / $quantidadeNotas;
     }
 
-    public function duracaoEmMinutos():int{
-        return 0;
-    }
+    abstract public function duracaoEmMinutos(): int;//informa que o método é abstrato e precisa ser especializado na classe filho
 }
