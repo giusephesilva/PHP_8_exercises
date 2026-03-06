@@ -1,6 +1,6 @@
 <?php
 
-abstract class Titulo{ //informa que a classe não pode ser instanciada diretamente, ela é uma classe 'base' para ser herdada  
+abstract class Titulo implements Avaliavel{ //informa que a classe não pode ser instanciada diretamente, ela é uma classe 'base' para ser herdada  
     private array $notas;
 
 
