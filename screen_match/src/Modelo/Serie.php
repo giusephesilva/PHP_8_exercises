@@ -11,7 +11,7 @@ class serie extends Titulo{
             parent::__construct($nome,$anoLancamento,$genero);
     }
 
-    #[Override] //indica que o método será sobreescrito evitando assim erros caso o método for instanciado de forma incorreta
+    #[\Override] //indica que o método será sobreescrito evitando assim erros caso o método for instanciado de forma incorreta
     public function duracaoEmMinutos(): int {
         return $this->temporadas * $this->episodiosPorTemporada * $this->minutosPorEpisodio;
     }
